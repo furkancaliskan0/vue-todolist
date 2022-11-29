@@ -1,7 +1,26 @@
-/* general rules */
 
 *{
-    margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    margin:0;
 }
+body{
+    font-family: sans-serif;
+}
+
+.container{
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 30px;
+}
+
+.container,h1{
+    text-align: center;
+}
+
+.task{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin-right: 50px;
+}
+

@@ -3,14 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Custom style -->
     <link rel="stylesheet" href="css/style.css">
     <title>To Do List</title>
 </head>
 <body>
 
+    <div id="list" class="container">
+        <div class="logo">
+            <img :src="logo" alt="">
+        </div>
+        <h1>Boolean</h1>
+        <div class="new-task">
+            <input type="text" placeholder="Inserisci Task" v-model="newTask" @Keyup.enter="addTask">
+            <button @click="addTask">Aggiungi</button>
+        </div>
+        <div class="tasks-container">
+            <ul>
+                <li class="task" v-for="task in tasks">
+                    {{task.text}}
+                    <i class="fas fa-times"></i>
+                </li>
+            </ul>
+        </div>
+    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.js"></script>
+
+     <!--  vue -->
+    <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
+    <!--  javaScript -->
     <script src="js/main.js" ></script>
 </body>
 </html>
