@@ -1,20 +1,28 @@
+/* general rules */
 
 *{
     padding: 0;
     margin:0;
+    box-sizing: border-box;
 }
+
 body{
     font-family: sans-serif;
+    background-color: aqua;
 }
 
 .container{
-    width: 50%;
-    margin: 0 auto;
+    margin: 100px auto;
+    width: 40%;
+    height: 70vh;
     border-radius: 30px;
+    padding-top: 40px;
+    text-align: center;
 }
 
 .container,h1{
     text-align: center;
+    padding: 20px;
 }
 
 .task{
@@ -22,5 +30,29 @@ body{
     justify-content: space-between;
     padding: 10px;
     margin-right: 50px;
+    font-weight: 500;
 }
 
+input {
+    height: 30px;
+    width: 60%;
+    border: none;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+button {
+    width: 35%;
+    height: 30px;
+    border: none;
+    font-size: 20px;
+    font-weight: 400;
+    text-decoration: none;
+    color: rgb(89, 105, 116);
+}
+
+h5{
+    color: blue;
+    padding: 20px;
+    font-size: 18px;
+}

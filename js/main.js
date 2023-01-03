@@ -17,10 +17,6 @@ createApp({
             done: true
          },
         {
-            text: "Fare la spesa",
-              done: true 
-        },
-        {
             text: "Controllare le Email",
             done: false
         },
@@ -44,15 +40,17 @@ createApp({
     }
   },
   methods : {
-    addTask : function(){
-        if (this.newTask !== '') {
-            this.tasks.unshift({text: this.newTask, done: false})
-        }
+    addTask(){
+      if(this.newTask.length< 5 || this.newTask === ''){
+          this.errore = true;
+      }else{
+          this.tasks.unshift({text: this.newTask,done: false});
+          this.errore = false;
+      }
         this.newTask = '';
-    },
-
-  
-  }
+      },
+      
+      }
 }).mount("#list")
 
 
